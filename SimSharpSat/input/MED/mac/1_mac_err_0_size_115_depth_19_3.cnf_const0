@@ -1,0 +1,5 @@
+c nIsolatedPIs 12
+c maxPI 0
+p cnf 1 2
+1 0
+-1 0

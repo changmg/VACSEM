@@ -1,0 +1,37 @@
+# Benchmark "dec_dec_miter" written by ABC on Sun Sep 17 17:48:59 2023
+.model dec_dec_miter
+.inputs pi0 pi1 pi2 pi3 pi4 pi5 pi6 pi7
+.outputs miter
+
+.and_gate_delay 1
+.default_input_arrival 0 0
+.default_output_required -1e+09 -1e+09
+
+
+
+.gate inv1 a=pi0 O=new_n10_
+.gate inv1 a=pi1 O=new_n11_
+.gate inv1 a=pi5 O=new_n12_
+.gate inv1 a=pi6 O=new_n13_
+.gate inv1 a=pi7 O=new_n14_
+.gate and2 a=pi0 b=new_n12_ O=new_n15_
+.gate inv1 a=new_n15_ O=new_n16_
+.gate and2 a=new_n10_ b=pi5 O=new_n17_
+.gate inv1 a=new_n17_ O=new_n18_
+.gate and2 a=new_n16_ b=new_n18_ O=new_n19_
+.gate inv1 a=new_n19_ O=new_n20_
+.gate and2 a=new_n11_ b=pi6 O=new_n21_
+.gate and2 a=pi7 b=new_n21_ O=new_n22_
+.gate and2 a=new_n20_ b=new_n22_ O=new_n23_
+.gate inv1 a=new_n23_ O=new_n24_
+.gate and2 a=new_n10_ b=pi1 O=new_n25_
+.gate and2 a=new_n12_ b=new_n13_ O=new_n26_
+.gate and2 a=new_n14_ b=new_n26_ O=new_n27_
+.gate and2 a=new_n25_ b=new_n27_ O=new_n28_
+.gate inv1 a=new_n28_ O=new_n29_
+.gate and2 a=new_n24_ b=new_n29_ O=new_n30_
+.gate inv1 a=new_n30_ O=new_n31_
+.gate and2 a=pi2 b=pi3 O=new_n32_
+.gate and2 a=pi4 b=new_n32_ O=new_n33_
+.gate and2 a=new_n31_ b=new_n33_ O=miter
+.end

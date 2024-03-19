@@ -1,0 +1,73 @@
+# Benchmark "top_top_miter" written by ABC on Sun Sep 17 18:01:03 2023
+.model top_top_miter
+.inputs dest_x[0] dest_x[10] dest_x[11] dest_x[12] dest_x[13] dest_x[14] \
+ dest_x[15] dest_x[16] dest_x[17] dest_x[18] dest_x[19] dest_x[1] \
+ dest_x[20] dest_x[21] dest_x[22] dest_x[23] dest_x[24] dest_x[25] \
+ dest_x[26] dest_x[27] dest_x[28] dest_x[29] dest_x[2] dest_x[3] dest_x[4] \
+ dest_x[5] dest_x[6] dest_x[7] dest_x[8] dest_x[9] dest_y[0] dest_y[10] \
+ dest_y[11] dest_y[12] dest_y[13] dest_y[14] dest_y[15] dest_y[16] \
+ dest_y[17] dest_y[18] dest_y[19] dest_y[1] dest_y[20] dest_y[21] \
+ dest_y[22] dest_y[23] dest_y[24] dest_y[25] dest_y[26] dest_y[27] \
+ dest_y[28] dest_y[29] dest_y[2] dest_y[3] dest_y[4] dest_y[5] dest_y[6] \
+ dest_y[7] dest_y[8] dest_y[9]
+.outputs miter
+
+.and_gate_delay 1
+.default_input_arrival 0 0
+.default_output_required -1e+09 -1e+09
+
+
+
+.gate inv1 a=dest_x[10] O=new_n62_
+.gate inv1 a=dest_x[12] O=new_n63_
+.gate inv1 a=dest_x[13] O=new_n64_
+.gate inv1 a=dest_x[16] O=new_n65_
+.gate inv1 a=dest_x[18] O=new_n66_
+.gate inv1 a=dest_x[21] O=new_n67_
+.gate inv1 a=dest_x[22] O=new_n68_
+.gate inv1 a=dest_x[26] O=new_n69_
+.gate inv1 a=dest_x[9] O=new_n70_
+.gate and2 a=dest_x[6] b=dest_x[7] O=new_n71_
+.gate and2 a=dest_x[8] b=new_n71_ O=new_n72_
+.gate and2 a=dest_x[0] b=dest_x[1] O=new_n73_
+.gate and2 a=dest_x[2] b=dest_x[3] O=new_n74_
+.gate and2 a=dest_x[4] b=dest_x[5] O=new_n75_
+.gate and2 a=new_n74_ b=new_n75_ O=new_n76_
+.gate and2 a=new_n73_ b=new_n76_ O=new_n77_
+.gate and2 a=new_n72_ b=new_n77_ O=new_n78_
+.gate inv1 a=new_n78_ O=new_n79_
+.gate and2 a=new_n62_ b=new_n70_ O=new_n80_
+.gate and2 a=new_n79_ b=new_n80_ O=new_n81_
+.gate inv1 a=new_n81_ O=new_n82_
+.gate and2 a=dest_x[11] b=new_n82_ O=new_n83_
+.gate inv1 a=new_n83_ O=new_n84_
+.gate and2 a=new_n63_ b=new_n64_ O=new_n85_
+.gate and2 a=new_n65_ b=new_n66_ O=new_n86_
+.gate and2 a=new_n85_ b=new_n86_ O=new_n87_
+.gate and2 a=new_n84_ b=new_n87_ O=new_n88_
+.gate inv1 a=new_n88_ O=new_n89_
+.gate and2 a=dest_x[14] b=dest_x[15] O=new_n90_
+.gate inv1 a=new_n90_ O=new_n91_
+.gate and2 a=new_n65_ b=new_n91_ O=new_n92_
+.gate inv1 a=new_n92_ O=new_n93_
+.gate and2 a=dest_x[17] b=new_n93_ O=new_n94_
+.gate inv1 a=new_n94_ O=new_n95_
+.gate and2 a=new_n66_ b=new_n95_ O=new_n96_
+.gate inv1 a=new_n96_ O=new_n97_
+.gate and2 a=dest_x[19] b=dest_x[20] O=new_n98_
+.gate and2 a=new_n97_ b=new_n98_ O=new_n99_
+.gate and2 a=new_n89_ b=new_n99_ O=new_n100_
+.gate inv1 a=new_n100_ O=new_n101_
+.gate and2 a=new_n67_ b=new_n68_ O=new_n102_
+.gate and2 a=new_n101_ b=new_n102_ O=new_n103_
+.gate inv1 a=new_n103_ O=new_n104_
+.gate and2 a=dest_x[23] b=dest_x[24] O=new_n105_
+.gate and2 a=dest_x[25] b=new_n105_ O=new_n106_
+.gate and2 a=new_n104_ b=new_n106_ O=new_n107_
+.gate inv1 a=new_n107_ O=new_n108_
+.gate and2 a=new_n69_ b=new_n108_ O=new_n109_
+.gate inv1 a=new_n109_ O=new_n110_
+.gate and2 a=dest_x[27] b=dest_x[28] O=new_n111_
+.gate and2 a=dest_x[29] b=new_n111_ O=new_n112_
+.gate and2 a=new_n110_ b=new_n112_ O=miter
+.end

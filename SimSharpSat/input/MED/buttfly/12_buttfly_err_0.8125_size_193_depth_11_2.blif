@@ -1,0 +1,16 @@
+# Benchmark "(null)" written by ABC on Sun Sep 17 20:06:54 2023
+.model (null)
+.inputs in_0[0] in_0[1] in_0[2] in_0[3] in_0[4] in_0[5] in_0[6] in_0[7] \
+ in_0[8] in_0[9] in_0[10] in_0[11] in_0[12] in_0[13] in_0[14] in_0[15] \
+ in_1[0] in_1[1] in_1[2] in_1[3] in_1[4] in_1[5] in_1[6] in_1[7] in_1[8] \
+ in_1[9] in_1[10] in_1[11] in_1[12] in_1[13] in_1[14] in_1[15]
+.outputs abs_err[002]
+
+.and_gate_delay 1
+.default_input_arrival 0 0
+.default_output_required -1e+09 -1e+09
+
+
+
+.gate zero O=abs_err[002]
+.end

@@ -1,0 +1,75 @@
+# Benchmark "dec_dec_miter" written by ABC on Sun Sep 17 17:49:02 2023
+.model dec_dec_miter
+.inputs pi0 pi1 pi2 pi3 pi4 pi5 pi6 pi7
+.outputs miter
+
+.and_gate_delay 1
+.default_input_arrival 0 0
+.default_output_required -1e+09 -1e+09
+
+
+
+.gate inv1 a=pi0 O=new_n10_
+.gate inv1 a=pi1 O=new_n11_
+.gate inv1 a=pi2 O=new_n12_
+.gate inv1 a=pi3 O=new_n13_
+.gate inv1 a=pi4 O=new_n14_
+.gate inv1 a=pi5 O=new_n15_
+.gate inv1 a=pi6 O=new_n16_
+.gate inv1 a=pi7 O=new_n17_
+.gate and2 a=pi2 b=pi6 O=new_n18_
+.gate inv1 a=new_n18_ O=new_n19_
+.gate and2 a=pi4 b=new_n19_ O=new_n20_
+.gate and2 a=new_n10_ b=new_n12_ O=new_n21_
+.gate inv1 a=new_n21_ O=new_n22_
+.gate and2 a=pi0 b=new_n16_ O=new_n23_
+.gate inv1 a=new_n23_ O=new_n24_
+.gate and2 a=new_n22_ b=new_n24_ O=new_n25_
+.gate and2 a=new_n20_ b=new_n25_ O=new_n26_
+.gate inv1 a=new_n26_ O=new_n27_
+.gate and2 a=pi0 b=new_n14_ O=new_n28_
+.gate and2 a=new_n18_ b=new_n28_ O=new_n29_
+.gate inv1 a=new_n29_ O=new_n30_
+.gate and2 a=new_n27_ b=new_n30_ O=new_n31_
+.gate inv1 a=new_n31_ O=new_n32_
+.gate and2 a=new_n15_ b=new_n32_ O=new_n33_
+.gate inv1 a=new_n33_ O=new_n34_
+.gate and2 a=new_n10_ b=pi5 O=new_n35_
+.gate inv1 a=new_n35_ O=new_n36_
+.gate and2 a=pi6 b=new_n35_ O=new_n37_
+.gate and2 a=new_n20_ b=new_n37_ O=new_n38_
+.gate inv1 a=new_n38_ O=new_n39_
+.gate and2 a=new_n34_ b=new_n39_ O=new_n40_
+.gate inv1 a=new_n40_ O=new_n41_
+.gate and2 a=pi1 b=pi3 O=new_n42_
+.gate and2 a=new_n17_ b=new_n42_ O=new_n43_
+.gate and2 a=new_n41_ b=new_n43_ O=new_n44_
+.gate inv1 a=new_n44_ O=new_n45_
+.gate and2 a=new_n10_ b=pi1 O=new_n46_
+.gate and2 a=new_n13_ b=new_n16_ O=new_n47_
+.gate and2 a=new_n46_ b=new_n47_ O=new_n48_
+.gate and2 a=pi5 b=new_n48_ O=new_n49_
+.gate inv1 a=new_n49_ O=new_n50_
+.gate and2 a=pi0 b=new_n15_ O=new_n51_
+.gate inv1 a=new_n51_ O=new_n52_
+.gate and2 a=new_n36_ b=new_n52_ O=new_n53_
+.gate inv1 a=new_n53_ O=new_n54_
+.gate and2 a=new_n11_ b=pi3 O=new_n55_
+.gate and2 a=pi6 b=new_n55_ O=new_n56_
+.gate and2 a=new_n54_ b=new_n56_ O=new_n57_
+.gate inv1 a=new_n57_ O=new_n58_
+.gate and2 a=new_n50_ b=new_n58_ O=new_n59_
+.gate inv1 a=new_n59_ O=new_n60_
+.gate and2 a=pi4 b=new_n60_ O=new_n61_
+.gate inv1 a=new_n61_ O=new_n62_
+.gate and2 a=new_n14_ b=new_n15_ O=new_n63_
+.gate and2 a=new_n48_ b=new_n63_ O=new_n64_
+.gate inv1 a=new_n64_ O=new_n65_
+.gate and2 a=new_n62_ b=new_n65_ O=new_n66_
+.gate inv1 a=new_n66_ O=new_n67_
+.gate and2 a=pi2 b=pi7 O=new_n68_
+.gate and2 a=new_n67_ b=new_n68_ O=new_n69_
+.gate inv1 a=new_n69_ O=new_n70_
+.gate and2 a=new_n45_ b=new_n70_ O=new_n71_
+.gate inv1 a=new_n71_ O=miter
+.end

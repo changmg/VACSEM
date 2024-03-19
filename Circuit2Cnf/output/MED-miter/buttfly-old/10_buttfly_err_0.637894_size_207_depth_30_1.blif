@@ -1,0 +1,25 @@
+# Benchmark "(null)" written by ABC on Sat Nov 19 10:45:40 2022
+.model (null)
+.inputs in_0[0] in_0[1] in_0[2] in_0[3] in_0[4] in_0[5] in_0[6] in_0[7] \
+ in_0[8] in_0[9] in_0[10] in_0[11] in_0[12] in_0[13] in_0[14] in_0[15] \
+ in_1[0] in_1[1] in_1[2] in_1[3] in_1[4] in_1[5] in_1[6] in_1[7] in_1[8] \
+ in_1[9] in_1[10] in_1[11] in_1[12] in_1[13] in_1[14] in_1[15]
+.outputs abs_err[001]
+
+.and_gate_delay 1
+.default_input_arrival 0 0
+.default_output_required -1e+09 -1e+09
+
+
+
+.gate inv1 a=in_0[1] O=new_n34_
+.gate inv1 a=in_1[1] O=new_n35_
+.gate and2 a=new_n34_ b=in_1[1] O=new_n36_
+.gate inv1 a=new_n36_ O=new_n37_
+.gate and2 a=in_0[1] b=new_n35_ O=new_n38_
+.gate inv1 a=new_n38_ O=new_n39_
+.gate and2 a=new_n37_ b=new_n39_ O=new_n40_
+.gate inv1 a=new_n40_ O=new_n41_
+.gate and2 a=in_0[0] b=in_1[0] O=new_n42_
+.gate and2 a=new_n41_ b=new_n42_ O=abs_err[001]
+.end

@@ -1,0 +1,13 @@
+# Benchmark "(null)" written by ABC on Sat Nov 19 10:46:13 2022
+.model (null)
+.inputs a[0] a[1] a[2] a[3] b[0] b[1] b[2] b[3] c[0] c[1] c[2] c[3]
+.outputs abs_err[007]
+
+.and_gate_delay 1
+.default_input_arrival 0 0
+.default_output_required -1e+09 -1e+09
+
+
+
+.gate zero O=abs_err[007]
+.end

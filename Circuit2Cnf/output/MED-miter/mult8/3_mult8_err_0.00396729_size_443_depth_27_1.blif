@@ -1,0 +1,14 @@
+# Benchmark "(null)" written by ABC on Fri Nov 18 16:00:26 2022
+.model (null)
+.inputs a[000] a[001] a[002] a[003] a[004] a[005] a[006] a[007] b[000] \
+ b[001] b[002] b[003] b[004] b[005] b[006] b[007]
+.outputs abs_err[001]
+
+.and_gate_delay 1
+.default_input_arrival 0 0
+.default_output_required -1e+09 -1e+09
+
+
+
+.gate zero O=abs_err[001]
+.end

@@ -1,0 +1,112 @@
+# Benchmark "top" written by ABC on Sun Sep 17 17:29:02 2023
+.model top
+.inputs dest_x[0] dest_x[1] dest_x[2] dest_x[3] dest_x[4] dest_x[5] \
+ dest_x[6] dest_x[7] dest_x[8] dest_x[9] dest_x[10] dest_x[11] dest_x[12] \
+ dest_x[13] dest_x[14] dest_x[15] dest_x[16] dest_x[17] dest_x[18] \
+ dest_x[19] dest_x[20] dest_x[21] dest_x[22] dest_x[23] dest_x[24] \
+ dest_x[25] dest_x[26] dest_x[27] dest_x[28] dest_x[29] dest_y[0] dest_y[1] \
+ dest_y[2] dest_y[3] dest_y[4] dest_y[5] dest_y[6] dest_y[7] dest_y[8] \
+ dest_y[9] dest_y[10] dest_y[11] dest_y[12] dest_y[13] dest_y[14] \
+ dest_y[15] dest_y[16] dest_y[17] dest_y[18] dest_y[19] dest_y[20] \
+ dest_y[21] dest_y[22] dest_y[23] dest_y[24] dest_y[25] dest_y[26] \
+ dest_y[27] dest_y[28] dest_y[29]
+.outputs outport[0] outport[1] outport[2] outport[3] outport[4] outport[5] \
+ outport[6] outport[7] outport[8] outport[9] outport[10] outport[11] \
+ outport[12] outport[13] outport[14] outport[15] outport[16] outport[17] \
+ outport[18] outport[19] outport[20] outport[21] outport[22] outport[23] \
+ outport[24] outport[25] outport[26] outport[27] outport[28] outport[29]
+.names dest_x[19] dest_x[20] new_n91_
+11 1
+.names dest_x[21] dest_x[22] new_n92_
+00 1
+.names new_n91_ new_n92_ new_n93_
+01 1
+.names dest_x[23] dest_x[24] new_n94_
+11 1
+.names dest_x[25] dest_x[26] new_n95_
+10 1
+.names new_n94_ new_n95_ new_n96_
+11 1
+.names new_n93_ new_n96_ new_n97_
+01 1
+.names dest_x[26] new_n97_ new_n98_
+00 1
+.names dest_x[13] dest_x[16] new_n99_
+00 1
+.names dest_x[18] dest_x[26] new_n100_
+00 1
+.names new_n99_ new_n100_ new_n101_
+11 1
+.names dest_x[11] dest_x[12] new_n102_
+00 1
+.names new_n92_ new_n102_ new_n103_
+11 1
+.names new_n101_ new_n103_ new_n104_
+11 1
+.names dest_x[27] dest_x[28] new_n105_
+11 1
+.names dest_x[29] new_n105_ new_n106_
+11 1
+.names new_n104_ new_n106_ new_n107_
+01 1
+.names new_n98_ new_n107_ outport[1]
+01 0
+.names outport[0]
+ 1
+.names outport[2]
+ 0
+.names outport[3]
+ 0
+.names outport[4]
+ 0
+.names outport[5]
+ 0
+.names outport[6]
+ 0
+.names outport[7]
+ 0
+.names outport[8]
+ 0
+.names outport[9]
+ 0
+.names outport[10]
+ 0
+.names outport[11]
+ 0
+.names outport[12]
+ 0
+.names outport[13]
+ 0
+.names outport[14]
+ 0
+.names outport[15]
+ 0
+.names outport[16]
+ 0
+.names outport[17]
+ 0
+.names outport[18]
+ 0
+.names outport[19]
+ 0
+.names outport[20]
+ 0
+.names outport[21]
+ 0
+.names outport[22]
+ 0
+.names outport[23]
+ 0
+.names outport[24]
+ 0
+.names outport[25]
+ 0
+.names outport[26]
+ 0
+.names outport[27]
+ 0
+.names outport[28]
+ 0
+.names outport[29]
+ 0
+.end

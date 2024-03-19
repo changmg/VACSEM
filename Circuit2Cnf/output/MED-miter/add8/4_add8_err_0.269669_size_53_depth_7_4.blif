@@ -1,0 +1,30 @@
+# Benchmark "(null)" written by ABC on Fri Nov 18 14:18:45 2022
+.model (null)
+.inputs a[000] a[001] a[002] a[003] a[004] a[005] a[006] a[007] b[000] \
+ b[001] b[002] b[003] b[004] b[005] b[006] b[007]
+.outputs abs_err[004]
+
+.and_gate_delay 1
+.default_input_arrival 0 0
+.default_output_required -1e+09 -1e+09
+
+
+
+.gate inv1 a=a[002] O=new_n18_
+.gate inv1 a=a[003] O=new_n19_
+.gate inv1 a=b[002] O=new_n20_
+.gate inv1 a=b[003] O=new_n21_
+.gate and2 a=a[002] b=b[002] O=new_n22_
+.gate inv1 a=new_n22_ O=new_n23_
+.gate and2 a=a[003] b=b[003] O=new_n24_
+.gate inv1 a=new_n24_ O=new_n25_
+.gate and2 a=new_n23_ b=new_n25_ O=new_n26_
+.gate and2 a=new_n18_ b=new_n20_ O=new_n27_
+.gate inv1 a=new_n27_ O=new_n28_
+.gate and2 a=a[001] b=b[001] O=new_n29_
+.gate and2 a=new_n19_ b=new_n21_ O=new_n30_
+.gate inv1 a=new_n30_ O=new_n31_
+.gate and2 a=new_n29_ b=new_n31_ O=new_n32_
+.gate and2 a=new_n28_ b=new_n32_ O=new_n33_
+.gate and2 a=new_n26_ b=new_n33_ O=abs_err[004]
+.end

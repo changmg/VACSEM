@@ -1,0 +1,38 @@
+# Benchmark "ctrl_ctrl_miter" written by ABC on Sun Sep 17 17:43:25 2023
+.model ctrl_ctrl_miter
+.inputs op_ext[0] op_ext[1] opcode[0] opcode[1] opcode[2] opcode[3] \
+ opcode[4]
+.outputs miter
+
+.and_gate_delay 1
+.default_input_arrival 0 0
+.default_output_required -1e+09 -1e+09
+
+
+
+.gate inv1 a=op_ext[0] O=new_n9_
+.gate inv1 a=opcode[0] O=new_n10_
+.gate inv1 a=opcode[2] O=new_n11_
+.gate inv1 a=opcode[3] O=new_n12_
+.gate inv1 a=opcode[4] O=new_n13_
+.gate and2 a=opcode[2] b=new_n13_ O=new_n14_
+.gate inv1 a=new_n14_ O=new_n15_
+.gate and2 a=opcode[3] b=new_n15_ O=new_n16_
+.gate inv1 a=new_n16_ O=new_n17_
+.gate and2 a=new_n11_ b=opcode[4] O=new_n18_
+.gate inv1 a=new_n18_ O=new_n19_
+.gate and2 a=new_n12_ b=new_n19_ O=new_n20_
+.gate inv1 a=new_n20_ O=new_n21_
+.gate and2 a=new_n10_ b=new_n21_ O=new_n22_
+.gate and2 a=new_n17_ b=new_n22_ O=new_n23_
+.gate inv1 a=new_n23_ O=new_n24_
+.gate and2 a=new_n9_ b=op_ext[1] O=new_n25_
+.gate and2 a=new_n10_ b=new_n25_ O=new_n26_
+.gate inv1 a=new_n26_ O=new_n27_
+.gate and2 a=opcode[3] b=new_n18_ O=new_n28_
+.gate and2 a=new_n27_ b=new_n28_ O=new_n29_
+.gate inv1 a=new_n29_ O=new_n30_
+.gate and2 a=new_n24_ b=new_n30_ O=new_n31_
+.gate inv1 a=new_n31_ O=new_n32_
+.gate and2 a=opcode[1] b=new_n32_ O=miter
+.end

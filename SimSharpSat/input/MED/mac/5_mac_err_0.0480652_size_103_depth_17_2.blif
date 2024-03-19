@@ -1,0 +1,33 @@
+# Benchmark "(null)" written by ABC on Sat Nov 19 10:46:12 2022
+.model (null)
+.inputs a[0] a[1] a[2] a[3] b[0] b[1] b[2] b[3] c[0] c[1] c[2] c[3]
+.outputs abs_err[002]
+
+.and_gate_delay 1
+.default_input_arrival 0 0
+.default_output_required -1e+09 -1e+09
+
+
+
+.gate and2 a=a[0] b=b[2] O=new_n14_
+.gate inv1 a=new_n14_ O=new_n15_
+.gate and2 a=a[1] b=b[1] O=new_n16_
+.gate inv1 a=new_n16_ O=new_n17_
+.gate and2 a=a[2] b=b[0] O=new_n18_
+.gate inv1 a=new_n18_ O=new_n19_
+.gate and2 a=new_n17_ b=new_n19_ O=new_n20_
+.gate inv1 a=new_n20_ O=new_n21_
+.gate and2 a=new_n16_ b=new_n18_ O=new_n22_
+.gate inv1 a=new_n22_ O=new_n23_
+.gate and2 a=new_n21_ b=new_n23_ O=new_n24_
+.gate inv1 a=new_n24_ O=new_n25_
+.gate and2 a=new_n14_ b=new_n24_ O=new_n26_
+.gate inv1 a=new_n26_ O=new_n27_
+.gate and2 a=new_n15_ b=new_n25_ O=new_n28_
+.gate inv1 a=new_n28_ O=new_n29_
+.gate and2 a=new_n27_ b=new_n29_ O=new_n30_
+.gate and2 a=a[1] b=b[0] O=new_n31_
+.gate and2 a=a[0] b=b[1] O=new_n32_
+.gate and2 a=new_n31_ b=new_n32_ O=new_n33_
+.gate and2 a=new_n30_ b=new_n33_ O=abs_err[002]
+.end

@@ -1,0 +1,9 @@
+c nIsolatedPIs 30
+c maxPI 2
+p cnf 3 4
+c gate 3 1 2 0
+1 -3 0
+2 -3 0
+-1 -2 3 0
+c PO
+3 0

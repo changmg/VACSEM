@@ -1,0 +1,81 @@
+# Benchmark "(null)" written by ABC on Sat Nov 19 10:10:09 2022
+.model (null)
+.inputs a[000] a[001] a[002] a[003] a[004] a[005] a[006] a[007] a[008] \
+ a[009] a[010] a[011] a[012] a[013] a[014] a[015] a[016] a[017] a[018] \
+ a[019] a[020] a[021] a[022] a[023] a[024] a[025] a[026] a[027] a[028] \
+ a[029] a[030] a[031] b[000] b[001] b[002] b[003] b[004] b[005] b[006] \
+ b[007] b[008] b[009] b[010] b[011] b[012] b[013] b[014] b[015] b[016] \
+ b[017] b[018] b[019] b[020] b[021] b[022] b[023] b[024] b[025] b[026] \
+ b[027] b[028] b[029] b[030] b[031]
+.outputs abs_err[020]
+
+.and_gate_delay 1
+.default_input_arrival 0 0
+.default_output_required -1e+09 -1e+09
+
+
+
+.gate inv1 a=a[013] O=new_n66_
+.gate inv1 a=a[014] O=new_n67_
+.gate inv1 a=a[015] O=new_n68_
+.gate inv1 a=a[016] O=new_n69_
+.gate inv1 a=a[017] O=new_n70_
+.gate inv1 a=a[018] O=new_n71_
+.gate inv1 a=a[019] O=new_n72_
+.gate inv1 a=b[013] O=new_n73_
+.gate inv1 a=b[014] O=new_n74_
+.gate inv1 a=b[015] O=new_n75_
+.gate inv1 a=b[016] O=new_n76_
+.gate inv1 a=b[017] O=new_n77_
+.gate inv1 a=b[018] O=new_n78_
+.gate inv1 a=b[019] O=new_n79_
+.gate and2 a=new_n67_ b=new_n74_ O=new_n80_
+.gate inv1 a=new_n80_ O=new_n81_
+.gate and2 a=new_n66_ b=new_n73_ O=new_n82_
+.gate inv1 a=new_n82_ O=new_n83_
+.gate and2 a=new_n81_ b=new_n83_ O=new_n84_
+.gate and2 a=a[013] b=b[013] O=new_n85_
+.gate inv1 a=new_n85_ O=new_n86_
+.gate and2 a=a[012] b=b[012] O=new_n87_
+.gate inv1 a=new_n87_ O=new_n88_
+.gate and2 a=new_n86_ b=new_n88_ O=new_n89_
+.gate inv1 a=new_n89_ O=new_n90_
+.gate and2 a=new_n84_ b=new_n90_ O=new_n91_
+.gate inv1 a=new_n91_ O=new_n92_
+.gate and2 a=a[015] b=b[015] O=new_n93_
+.gate inv1 a=new_n93_ O=new_n94_
+.gate and2 a=a[014] b=b[014] O=new_n95_
+.gate inv1 a=new_n95_ O=new_n96_
+.gate and2 a=new_n94_ b=new_n96_ O=new_n97_
+.gate and2 a=new_n92_ b=new_n97_ O=new_n98_
+.gate inv1 a=new_n98_ O=new_n99_
+.gate and2 a=a[018] b=b[018] O=new_n100_
+.gate inv1 a=new_n100_ O=new_n101_
+.gate and2 a=a[017] b=b[017] O=new_n102_
+.gate inv1 a=new_n102_ O=new_n103_
+.gate and2 a=new_n71_ b=new_n78_ O=new_n104_
+.gate inv1 a=new_n104_ O=new_n105_
+.gate and2 a=new_n103_ b=new_n105_ O=new_n106_
+.gate and2 a=new_n101_ b=new_n106_ O=new_n107_
+.gate and2 a=a[019] b=new_n79_ O=new_n108_
+.gate inv1 a=new_n108_ O=new_n109_
+.gate and2 a=new_n72_ b=b[019] O=new_n110_
+.gate inv1 a=new_n110_ O=new_n111_
+.gate and2 a=new_n109_ b=new_n111_ O=new_n112_
+.gate inv1 a=new_n112_ O=new_n113_
+.gate and2 a=a[016] b=new_n76_ O=new_n114_
+.gate inv1 a=new_n114_ O=new_n115_
+.gate and2 a=new_n69_ b=b[016] O=new_n116_
+.gate inv1 a=new_n116_ O=new_n117_
+.gate and2 a=new_n115_ b=new_n117_ O=new_n118_
+.gate inv1 a=new_n118_ O=new_n119_
+.gate and2 a=new_n68_ b=new_n75_ O=new_n120_
+.gate inv1 a=new_n120_ O=new_n121_
+.gate and2 a=new_n70_ b=new_n77_ O=new_n122_
+.gate inv1 a=new_n122_ O=new_n123_
+.gate and2 a=new_n121_ b=new_n123_ O=new_n124_
+.gate and2 a=new_n119_ b=new_n124_ O=new_n125_
+.gate and2 a=new_n113_ b=new_n125_ O=new_n126_
+.gate and2 a=new_n107_ b=new_n126_ O=new_n127_
+.gate and2 a=new_n99_ b=new_n127_ O=abs_err[020]
+.end

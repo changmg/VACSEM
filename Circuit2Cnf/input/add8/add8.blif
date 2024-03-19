@@ -1,0 +1,131 @@
+# Benchmark "add8" written by ABC on Fri Nov 18 14:17:49 2022
+.model add8
+.inputs a[000] a[001] a[002] a[003] a[004] a[005] a[006] a[007] b[000] \
+ b[001] b[002] b[003] b[004] b[005] b[006] b[007]
+.outputs o[000] o[001] o[002] o[003] o[004] o[005] o[006] o[007] o[008]
+.names a[007] b[007] new_n29_
+11 1
+.names a[007] b[007] new_n30_
+11 1
+00 1
+.names a[006] b[006] new_n31_
+0- 1
+-0 1
+.names new_n31_ new_n30_ new_n32_
+00 1
+.names new_n32_ new_n29_ new_n33_
+1- 1
+-1 1
+.names a[006] b[006] new_n34_
+11 1
+00 1
+.names new_n34_ new_n30_ new_n35_
+00 1
+.names a[005] b[005] new_n36_
+0- 1
+-0 1
+.names a[005] b[005] new_n37_
+10 1
+01 1
+.names a[004] b[004] new_n38_
+0- 1
+-0 1
+.names new_n37_ new_n38_ new_n39_
+10 1
+.names new_n36_ new_n39_ new_n40_
+10 1
+.names new_n35_ new_n40_ new_n41_
+10 1
+.names new_n41_ new_n33_ new_n42_
+1- 1
+-1 1
+.names a[004] b[004] new_n43_
+11 1
+00 1
+.names new_n37_ new_n43_ new_n44_
+10 1
+.names new_n44_ new_n35_ new_n45_
+11 1
+.names a[003] b[003] new_n46_
+0- 1
+-0 1
+.names a[003] b[003] new_n47_
+10 1
+01 1
+.names a[002] b[002] new_n48_
+0- 1
+-0 1
+.names new_n47_ new_n48_ new_n49_
+10 1
+.names new_n46_ new_n49_ new_n50_
+10 1
+.names a[002] b[002] new_n51_
+11 1
+00 1
+.names new_n47_ new_n51_ new_n52_
+10 1
+.names a[001] b[001] new_n53_
+0- 1
+-0 1
+.names a[001] b[001] new_n54_
+10 1
+01 1
+.names a[000] b[000] new_n55_
+0- 1
+-0 1
+.names new_n54_ new_n55_ new_n56_
+10 1
+.names new_n53_ new_n56_ new_n57_
+10 1
+.names new_n52_ new_n57_ new_n58_
+10 1
+.names new_n50_ new_n58_ new_n59_
+10 1
+.names new_n45_ new_n59_ new_n60_
+10 1
+.names new_n60_ new_n42_ o[008]
+1- 1
+-1 1
+.names new_n55_ new_n54_ o[001]
+11 1
+00 1
+.names new_n57_ new_n51_ o[002]
+10 1
+01 1
+.names new_n57_ new_n51_ new_n64_
+00 1
+.names new_n64_ new_n48_ new_n65_
+1- 1
+-0 1
+.names new_n65_ new_n47_ o[003]
+10 1
+01 1
+.names new_n59_ new_n43_ o[004]
+10 1
+01 1
+.names new_n59_ new_n43_ new_n68_
+00 1
+.names new_n68_ new_n38_ new_n69_
+1- 1
+-0 1
+.names new_n69_ new_n37_ o[005]
+10 1
+01 1
+.names new_n44_ new_n59_ new_n71_
+10 1
+.names new_n40_ new_n71_ new_n72_
+10 1
+.names new_n72_ new_n34_ o[006]
+10 1
+01 1
+.names new_n72_ new_n34_ new_n74_
+00 1
+.names new_n31_ new_n74_ new_n75_
+10 1
+.names new_n75_ new_n30_ o[007]
+10 1
+01 1
+.names a[000] b[000] o[000]
+10 1
+01 1
+.end

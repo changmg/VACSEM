@@ -1,0 +1,29 @@
+# Benchmark "ctrl_ctrl_miter" written by ABC on Sun Sep 17 17:43:25 2023
+.model ctrl_ctrl_miter
+.inputs op_ext[0] op_ext[1] opcode[0] opcode[1] opcode[2] opcode[3] \
+ opcode[4]
+.outputs miter
+
+.and_gate_delay 1
+.default_input_arrival 0 0
+.default_output_required -1e+09 -1e+09
+
+
+
+.gate inv1 a=op_ext[0] O=new_n9_
+.gate inv1 a=opcode[0] O=new_n10_
+.gate inv1 a=opcode[2] O=new_n11_
+.gate inv1 a=opcode[4] O=new_n12_
+.gate and2 a=new_n9_ b=op_ext[1] O=new_n13_
+.gate and2 a=opcode[0] b=new_n11_ O=new_n14_
+.gate and2 a=opcode[4] b=new_n14_ O=new_n15_
+.gate and2 a=new_n13_ b=new_n15_ O=new_n16_
+.gate inv1 a=new_n16_ O=new_n17_
+.gate and2 a=new_n10_ b=opcode[2] O=new_n18_
+.gate and2 a=new_n12_ b=new_n18_ O=new_n19_
+.gate inv1 a=new_n19_ O=new_n20_
+.gate and2 a=new_n17_ b=new_n20_ O=new_n21_
+.gate inv1 a=new_n21_ O=new_n22_
+.gate and2 a=opcode[1] b=opcode[3] O=new_n23_
+.gate and2 a=new_n22_ b=new_n23_ O=miter
+.end

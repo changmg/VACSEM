@@ -1,0 +1,3 @@
+[submodule "Circuit2Cnf/abc"]
+	path = Circuit2Cnf/abc
+	url = https://github.com/changmg/abc.git

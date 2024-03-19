@@ -1,0 +1,207 @@
+# Benchmark "(null)" written by ABC on Sun Sep 17 17:26:12 2023
+.model ctrl
+.inputs opcode[0] opcode[1] opcode[2] opcode[3] opcode[4] op_ext[0] \
+ op_ext[1]
+.outputs sel_reg_dst[0] sel_reg_dst[1] sel_alu_opB[0] sel_alu_opB[1] \
+ alu_op[0] alu_op[1] alu_op[2] alu_op_ext[0] alu_op_ext[1] alu_op_ext[2] \
+ alu_op_ext[3] halt reg_write sel_pc_opA sel_pc_opB beqz bnez bgez bltz \
+ jump Cin invA invB sign mem_write sel_wb
+.names opcode[3] opcode[4] new_n34_
+11 1
+.names opcode[3] opcode[4] new_n35_
+00 1
+.names opcode[2] new_n35_ jump
+11 1
+.names new_n34_ jump new_n37_
+00 1
+.names opcode[1] new_n37_ new_n38_
+10 1
+.names opcode[0] opcode[2] new_n39_
+00 1
+.names opcode[4] new_n39_ new_n40_
+10 1
+.names opcode[3] new_n40_ new_n41_
+11 1
+.names new_n38_ new_n41_ sel_reg_dst[0]
+00 0
+.names opcode[1] opcode[3] new_n43_
+01 1
+.names opcode[0] new_n43_ new_n44_
+01 1
+.names opcode[1] opcode[3] new_n45_
+10 1
+.names new_n44_ new_n45_ new_n46_
+00 1
+.names opcode[2] opcode[4] new_n47_
+01 1
+.names new_n46_ new_n47_ new_n48_
+01 1
+.names opcode[2] opcode[4] new_n49_
+10 1
+.names new_n45_ new_n49_ new_n50_
+11 1
+.names new_n48_ new_n50_ sel_reg_dst[1]
+00 0
+.names new_n43_ new_n45_ new_n52_
+00 1
+.names opcode[0] new_n52_ new_n53_
+00 1
+.names opcode[4] new_n53_ new_n54_
+10 1
+.names opcode[1] opcode[3] new_n55_
+11 1
+.names opcode[4] new_n55_ new_n56_
+00 1
+.names opcode[2] new_n56_ new_n57_
+00 1
+.names new_n54_ new_n57_ sel_alu_opB[0]
+01 1
+.names opcode[0] new_n34_ new_n59_
+11 1
+.names opcode[2] opcode[3] new_n60_
+11 1
+.names new_n35_ new_n55_ new_n61_
+00 1
+.names new_n60_ new_n61_ new_n62_
+01 1
+.names new_n59_ new_n62_ sel_alu_opB[1]
+01 1
+.names opcode[2] opcode[4] new_n64_
+11 1
+.names sel_reg_dst[0] new_n64_ new_n65_
+01 1
+.names opcode[2] opcode[3] new_n66_
+01 1
+.names op_ext[1] new_n47_ new_n67_
+01 1
+.names opcode[1] new_n67_ new_n68_
+10 1
+.names new_n66_ new_n68_ new_n69_
+11 1
+.names new_n65_ new_n69_ new_n70_
+00 1
+.names opcode[0] new_n70_ new_n71_
+10 1
+.names op_ext[0] new_n39_ new_n72_
+11 1
+.names sel_reg_dst[0] new_n72_ new_n73_
+11 1
+.names new_n71_ new_n73_ alu_op[0]
+00 0
+.names opcode[2] opcode[3] new_n75_
+00 1
+.names new_n60_ new_n75_ new_n76_
+00 1
+.names new_n49_ new_n76_ new_n77_
+01 1
+.names new_n68_ new_n77_ alu_op[1]
+11 1
+.names opcode[4] new_n76_ new_n79_
+10 1
+.names opcode[0] opcode[1] new_n80_
+11 1
+.names opcode[4] new_n80_ new_n81_
+10 1
+.names new_n66_ new_n81_ new_n82_
+10 1
+.names new_n79_ new_n82_ alu_op[2]
+00 0
+.names opcode[1] new_n35_ new_n84_
+11 1
+.names new_n59_ new_n84_ new_n85_
+00 1
+.names opcode[2] new_n85_ new_n86_
+10 1
+.names opcode[0] opcode[1] new_n87_
+00 1
+.names opcode[2] new_n34_ new_n88_
+01 1
+.names new_n87_ new_n88_ new_n89_
+11 1
+.names new_n86_ new_n89_ alu_op_ext[0]
+00 0
+.names opcode[2] opcode[4] new_n91_
+00 1
+.names opcode[3] new_n40_ new_n92_
+00 1
+.names new_n91_ new_n92_ new_n93_
+01 1
+.names opcode[4] new_n60_ new_n94_
+11 1
+.names new_n93_ new_n94_ new_n95_
+00 1
+.names opcode[1] new_n95_ alu_op_ext[1]
+10 1
+.names opcode[0] new_n45_ new_n97_
+01 1
+.names new_n43_ new_n97_ new_n98_
+00 1
+.names new_n47_ new_n98_ new_n99_
+10 1
+.names new_n50_ new_n99_ alu_op_ext[2]
+00 0
+.names opcode[1] opcode[4] new_n101_
+01 1
+.names opcode[2] new_n101_ new_n102_
+00 1
+.names opcode[3] new_n102_ new_n103_
+10 1
+.names new_n39_ new_n45_ new_n104_
+11 1
+.names new_n35_ new_n104_ new_n105_
+00 1
+.names new_n103_ new_n105_ alu_op_ext[3]
+01 1
+.names opcode[4] new_n75_ new_n107_
+01 1
+.names new_n87_ new_n107_ halt
+11 1
+.names opcode[4] new_n60_ new_n109_
+01 1
+.names opcode[1] new_n91_ new_n110_
+10 1
+.names new_n92_ new_n110_ new_n111_
+10 1
+.names new_n109_ new_n111_ reg_write
+00 1
+.names opcode[0] jump sel_pc_opA
+11 1
+.names opcode[0] jump sel_pc_opB
+01 1
+.names new_n44_ new_n49_ beqz
+11 1
+.names opcode[0] opcode[1] new_n116_
+10 1
+.names new_n109_ new_n116_ bnez
+11 1
+.names new_n80_ new_n109_ bgez
+11 1
+.names opcode[0] new_n91_ new_n119_
+11 1
+.names new_n64_ new_n80_ new_n120_
+10 1
+.names new_n119_ new_n120_ new_n121_
+00 1
+.names opcode[3] new_n121_ Cin
+10 1
+.names new_n101_ new_n116_ new_n123_
+01 1
+.names Cin new_n123_ invA
+11 1
+.names opcode[1] opcode[2] new_n125_
+00 1
+.names Cin new_n125_ invB
+10 1
+.names new_n80_ new_n87_ new_n127_
+00 1
+.names opcode[4] new_n75_ new_n128_
+11 1
+.names new_n127_ new_n128_ mem_write
+01 1
+.names new_n116_ new_n128_ sel_wb
+11 1
+.names bltz
+ 0
+.names sign
+ 1
+.end

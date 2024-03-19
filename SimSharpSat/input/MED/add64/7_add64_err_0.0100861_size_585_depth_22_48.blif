@@ -1,0 +1,155 @@
+# Benchmark "(null)" written by ABC on Sat Nov 19 10:11:29 2022
+.model (null)
+.inputs a[000] a[001] a[002] a[003] a[004] a[005] a[006] a[007] a[008] \
+ a[009] a[010] a[011] a[012] a[013] a[014] a[015] a[016] a[017] a[018] \
+ a[019] a[020] a[021] a[022] a[023] a[024] a[025] a[026] a[027] a[028] \
+ a[029] a[030] a[031] a[032] a[033] a[034] a[035] a[036] a[037] a[038] \
+ a[039] a[040] a[041] a[042] a[043] a[044] a[045] a[046] a[047] a[048] \
+ a[049] a[050] a[051] a[052] a[053] a[054] a[055] a[056] a[057] a[058] \
+ a[059] a[060] a[061] a[062] a[063] b[000] b[001] b[002] b[003] b[004] \
+ b[005] b[006] b[007] b[008] b[009] b[010] b[011] b[012] b[013] b[014] \
+ b[015] b[016] b[017] b[018] b[019] b[020] b[021] b[022] b[023] b[024] \
+ b[025] b[026] b[027] b[028] b[029] b[030] b[031] b[032] b[033] b[034] \
+ b[035] b[036] b[037] b[038] b[039] b[040] b[041] b[042] b[043] b[044] \
+ b[045] b[046] b[047] b[048] b[049] b[050] b[051] b[052] b[053] b[054] \
+ b[055] b[056] b[057] b[058] b[059] b[060] b[061] b[062] b[063]
+.outputs abs_err[048]
+
+.and_gate_delay 1
+.default_input_arrival 0 0
+.default_output_required -1e+09 -1e+09
+
+
+
+.gate inv1 a=a[033] O=new_n130_
+.gate inv1 a=a[034] O=new_n131_
+.gate inv1 a=a[035] O=new_n132_
+.gate inv1 a=a[036] O=new_n133_
+.gate inv1 a=a[037] O=new_n134_
+.gate inv1 a=a[038] O=new_n135_
+.gate inv1 a=a[039] O=new_n136_
+.gate inv1 a=a[040] O=new_n137_
+.gate inv1 a=a[041] O=new_n138_
+.gate inv1 a=a[042] O=new_n139_
+.gate inv1 a=a[043] O=new_n140_
+.gate inv1 a=a[044] O=new_n141_
+.gate inv1 a=a[045] O=new_n142_
+.gate inv1 a=a[046] O=new_n143_
+.gate inv1 a=a[047] O=new_n144_
+.gate inv1 a=b[033] O=new_n145_
+.gate inv1 a=b[034] O=new_n146_
+.gate inv1 a=b[035] O=new_n147_
+.gate inv1 a=b[036] O=new_n148_
+.gate inv1 a=b[037] O=new_n149_
+.gate inv1 a=b[038] O=new_n150_
+.gate inv1 a=b[039] O=new_n151_
+.gate inv1 a=b[040] O=new_n152_
+.gate inv1 a=b[041] O=new_n153_
+.gate inv1 a=b[042] O=new_n154_
+.gate inv1 a=b[043] O=new_n155_
+.gate inv1 a=b[044] O=new_n156_
+.gate inv1 a=b[045] O=new_n157_
+.gate inv1 a=b[046] O=new_n158_
+.gate inv1 a=b[047] O=new_n159_
+.gate and2 a=a[039] b=b[039] O=new_n160_
+.gate inv1 a=new_n160_ O=new_n161_
+.gate and2 a=a[038] b=b[038] O=new_n162_
+.gate inv1 a=new_n162_ O=new_n163_
+.gate and2 a=new_n161_ b=new_n163_ O=new_n164_
+.gate and2 a=new_n135_ b=new_n150_ O=new_n165_
+.gate inv1 a=new_n165_ O=new_n166_
+.gate and2 a=new_n134_ b=new_n149_ O=new_n167_
+.gate inv1 a=new_n167_ O=new_n168_
+.gate and2 a=new_n166_ b=new_n168_ O=new_n169_
+.gate and2 a=a[036] b=b[036] O=new_n170_
+.gate inv1 a=new_n170_ O=new_n171_
+.gate and2 a=a[037] b=b[037] O=new_n172_
+.gate inv1 a=new_n172_ O=new_n173_
+.gate and2 a=new_n171_ b=new_n173_ O=new_n174_
+.gate and2 a=a[035] b=b[035] O=new_n175_
+.gate inv1 a=new_n175_ O=new_n176_
+.gate and2 a=new_n132_ b=new_n147_ O=new_n177_
+.gate inv1 a=new_n177_ O=new_n178_
+.gate and2 a=a[034] b=b[034] O=new_n179_
+.gate and2 a=new_n178_ b=new_n179_ O=new_n180_
+.gate inv1 a=new_n180_ O=new_n181_
+.gate and2 a=new_n176_ b=new_n181_ O=new_n182_
+.gate and2 a=new_n130_ b=new_n145_ O=new_n183_
+.gate inv1 a=new_n183_ O=new_n184_
+.gate and2 a=new_n131_ b=new_n146_ O=new_n185_
+.gate inv1 a=new_n185_ O=new_n186_
+.gate and2 a=new_n178_ b=new_n186_ O=new_n187_
+.gate and2 a=new_n184_ b=new_n187_ O=new_n188_
+.gate and2 a=new_n182_ b=new_n188_ O=new_n189_
+.gate and2 a=a[032] b=b[032] O=new_n190_
+.gate inv1 a=new_n190_ O=new_n191_
+.gate and2 a=a[033] b=b[033] O=new_n192_
+.gate inv1 a=new_n192_ O=new_n193_
+.gate and2 a=new_n191_ b=new_n193_ O=new_n194_
+.gate inv1 a=new_n194_ O=new_n195_
+.gate and2 a=new_n189_ b=new_n195_ O=new_n196_
+.gate inv1 a=new_n196_ O=new_n197_
+.gate and2 a=new_n182_ b=new_n197_ O=new_n198_
+.gate inv1 a=new_n198_ O=new_n199_
+.gate and2 a=new_n133_ b=new_n148_ O=new_n200_
+.gate inv1 a=new_n200_ O=new_n201_
+.gate and2 a=new_n199_ b=new_n201_ O=new_n202_
+.gate inv1 a=new_n202_ O=new_n203_
+.gate and2 a=new_n174_ b=new_n203_ O=new_n204_
+.gate inv1 a=new_n204_ O=new_n205_
+.gate and2 a=new_n169_ b=new_n205_ O=new_n206_
+.gate inv1 a=new_n206_ O=new_n207_
+.gate and2 a=new_n164_ b=new_n207_ O=new_n208_
+.gate inv1 a=new_n208_ O=new_n209_
+.gate and2 a=new_n136_ b=new_n151_ O=new_n210_
+.gate inv1 a=new_n210_ O=new_n211_
+.gate and2 a=a[044] b=b[044] O=new_n212_
+.gate inv1 a=new_n212_ O=new_n213_
+.gate and2 a=new_n211_ b=new_n213_ O=new_n214_
+.gate and2 a=a[045] b=b[045] O=new_n215_
+.gate inv1 a=new_n215_ O=new_n216_
+.gate and2 a=a[046] b=b[046] O=new_n217_
+.gate inv1 a=new_n217_ O=new_n218_
+.gate and2 a=new_n216_ b=new_n218_ O=new_n219_
+.gate and2 a=a[042] b=b[042] O=new_n220_
+.gate inv1 a=new_n220_ O=new_n221_
+.gate and2 a=new_n137_ b=new_n152_ O=new_n222_
+.gate inv1 a=new_n222_ O=new_n223_
+.gate and2 a=new_n221_ b=new_n223_ O=new_n224_
+.gate and2 a=new_n219_ b=new_n224_ O=new_n225_
+.gate and2 a=new_n214_ b=new_n225_ O=new_n226_
+.gate and2 a=new_n141_ b=new_n156_ O=new_n227_
+.gate inv1 a=new_n227_ O=new_n228_
+.gate and2 a=new_n140_ b=new_n155_ O=new_n229_
+.gate inv1 a=new_n229_ O=new_n230_
+.gate and2 a=a[041] b=b[041] O=new_n231_
+.gate inv1 a=new_n231_ O=new_n232_
+.gate and2 a=new_n230_ b=new_n232_ O=new_n233_
+.gate and2 a=new_n228_ b=new_n233_ O=new_n234_
+.gate and2 a=new_n144_ b=new_n159_ O=new_n235_
+.gate inv1 a=new_n235_ O=new_n236_
+.gate and2 a=a[047] b=b[047] O=new_n237_
+.gate inv1 a=new_n237_ O=new_n238_
+.gate and2 a=new_n236_ b=new_n238_ O=new_n239_
+.gate and2 a=a[040] b=b[040] O=new_n240_
+.gate inv1 a=new_n240_ O=new_n241_
+.gate and2 a=a[043] b=b[043] O=new_n242_
+.gate inv1 a=new_n242_ O=new_n243_
+.gate and2 a=new_n241_ b=new_n243_ O=new_n244_
+.gate and2 a=new_n239_ b=new_n244_ O=new_n245_
+.gate and2 a=new_n143_ b=new_n158_ O=new_n246_
+.gate inv1 a=new_n246_ O=new_n247_
+.gate and2 a=new_n138_ b=new_n153_ O=new_n248_
+.gate inv1 a=new_n248_ O=new_n249_
+.gate and2 a=new_n247_ b=new_n249_ O=new_n250_
+.gate and2 a=new_n142_ b=new_n157_ O=new_n251_
+.gate inv1 a=new_n251_ O=new_n252_
+.gate and2 a=new_n139_ b=new_n154_ O=new_n253_
+.gate inv1 a=new_n253_ O=new_n254_
+.gate and2 a=new_n252_ b=new_n254_ O=new_n255_
+.gate and2 a=new_n250_ b=new_n255_ O=new_n256_
+.gate and2 a=new_n245_ b=new_n256_ O=new_n257_
+.gate and2 a=new_n234_ b=new_n257_ O=new_n258_
+.gate and2 a=new_n226_ b=new_n258_ O=new_n259_
+.gate and2 a=new_n209_ b=new_n259_ O=abs_err[048]
+.end

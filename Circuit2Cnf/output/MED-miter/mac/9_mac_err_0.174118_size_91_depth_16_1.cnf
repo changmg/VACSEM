@@ -1,0 +1,17 @@
+c nIsolatedPIs 8
+c maxPI 4
+p cnf 7 10
+c gate 5 1 4 0
+1 -5 0
+4 -5 0
+-1 -4 5 0
+c gate 6 2 3 0
+2 -6 0
+3 -6 0
+-2 -3 6 0
+c gate 7 5 6 0
+5 -7 0
+6 -7 0
+-5 -6 7 0
+c PO
+7 0
