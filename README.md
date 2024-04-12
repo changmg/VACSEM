@@ -62,7 +62,7 @@ There are two important folders in the root directory of VACSEM project:
     You can install these libraries with the following command:
 
     ```shell
-    sudo apt install libboost1.74-dev
+    sudo apt install libboost1.74-all-dev
     sudo apt install libreadline-dev
     sudo apt install libgmp-dev
     sudo apt-get install libmpfr-dev
