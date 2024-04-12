@@ -95,7 +95,7 @@ There are two ways of downloading VACSEM:
 1. Clone the VACSEM project, and then update the submodules:
 
 ```shell
-git clone https://github.com/changmg/abc.git
+git clone https://github.com/changmg/VACSEM.git
 cd VACSEM
 git submodule init
 git submodule update
@@ -104,7 +104,7 @@ git submodule update
 2. Alternatively, clone the VACSEM project as well as the submodules: 
 
 ```shell
-git clone --recursive https://github.com/changmg/abc.git
+git clone --recursive https://github.com/changmg/VACSEM.git
 ```
 
 ## Build
